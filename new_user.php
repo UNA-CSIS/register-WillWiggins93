@@ -49,7 +49,7 @@ $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashedPass
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION['username'] = $username;
-    header("location: games.php"); 
+    header("location: games.php");
 } else {
     $_SESSION['error'] = 'Registration failed';
     header("location: register.php");
