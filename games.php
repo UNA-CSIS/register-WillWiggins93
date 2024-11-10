@@ -22,19 +22,19 @@ if (isset($_SESSION['username'])) {
         $dbusername = "root";
         $dbpassword = "";
         $dbname = "softball";
-        
+
         // create connection
         $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-        
+
         // check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        
+
         // retrieve data
         $sql = "SELECT id, opponent, site, result FROM games";
         $result = $conn->query($sql);
-        
+
         echo "<table border='1'>
                 <tr>
                 <th>ID</th>
